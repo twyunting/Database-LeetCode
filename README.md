@@ -1,2 +1,3 @@
 # Database-LeetCode
-LeetCode problems for Database category
+1. LeetCode problems for Database category
+2. MYSQL
