@@ -1,0 +1,12 @@
+# Write your MySQL query statement below
+
+SELECT Department.NAME AS Department, Employee.Name AS Employee, Employee.Salary AS Salary 
+FROM Employee INNER JOIN Department ON Employee.DepartmentID = Department.Id
+WHERE (Employee.DepartmentId, Employee.Salary) IN
+    (
+        SELECT Employee.DepartmentId, MAX(Employee.Salary) 
+        FROM Employee
+        GROUP BY Employee.DepartmentID
+    )
+
+
