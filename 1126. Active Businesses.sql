@@ -11,5 +11,5 @@ join avgTable
 on E.event_type = avgTable.event_type
 where E.occurences > avgTable.avg_occ
 group by business_id
-having count(*) > 1
+having count(*) > 1 # An active business is a business that has more than one event_type
 
